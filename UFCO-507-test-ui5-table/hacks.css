@@ -1,0 +1,21 @@
+/* General */
+
+body, #content {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+/* atlas */
+
+atlas-avatar {
+    display: inline-block;
+}
+
+atlas-avatar::part(initials) {
+	background-color: var(--atlas-color-primary-b500);
+    color: var(--atlas-color-white);
+}
+
+/* ui5 */
+

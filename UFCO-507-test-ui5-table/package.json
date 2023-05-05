@@ -1,5 +1,25 @@
 {
+  "scripts": {
+    "build": "npx rimraf dist && webpack watch --progress",
+    "dev-server": "webpack serve --open"
+  },
   "dependencies": {
+    "@cision/atlas-components": "github:cision/atlas-components#next",
     "@ui5/webcomponents": "^1.12.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "dotenv": "^16.0.1",
+    "html-loader": "^3.1.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   }
 }
