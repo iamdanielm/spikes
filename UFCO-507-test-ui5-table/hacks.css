@@ -3,7 +3,10 @@
 body, #content {
     height: 100%;
     width: 100%;
+}
+#content {
     padding: 20px;
+    background-color: var(--atlas-color-primary-n50);
 }
 
 /* atlas */
@@ -17,5 +20,64 @@ atlas-avatar::part(initials) {
     color: var(--atlas-color-white);
 }
 
-/* ui5 */
+/* table toolbar */
 
+#table-toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    background-color: var(--atlas-color-white);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#table-toolbar > * {
+    padding: 0 8px;
+}
+
+#table-toolbar #title {
+    font-weight: bold;
+}
+
+#table-toolbar #title, 
+#table-toolbar #search {
+    flex-grow: 1;
+}
+
+#table-toolbar #actions {
+    flex-grow: 1.5;
+
+}
+
+#table-toolbar #controls {
+    flex-grow: 0.5;
+}
+
+#table-toolbar #actions,
+#table-toolbar #controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#table-toolbar #actions atlas-button-set::part(primary),
+#table-toolbar #controls atlas-button-set::part(primary) {
+    justify-content: space-between;
+}
+
+/* atlasified table */
+
+ui5-table-cell[slot="default-1"] {
+    color: var(--atlas-color-primary-b400);
+    font-weight: bold;
+}
+
+ui5-table-column[slot="columns-1"] {
+    font-weight: bold;
+}
+
+/* :root {
+    --sapList_HeaderBackground: var(--atlas-color-white);
+} */

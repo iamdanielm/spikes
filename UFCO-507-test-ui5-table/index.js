@@ -1,4 +1,5 @@
-import { data, camelCaseToNormalCase } from './utils.js'
+import { camelCaseToNormalCase } from './utils.js'
+import { tableData as data } from './mock-data.js'
 
 const content = document.querySelector('#content')
 const table = document.createElement('ui5-table')

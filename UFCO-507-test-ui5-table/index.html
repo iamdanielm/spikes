@@ -6,46 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFCO-507: Test ui5 table</title>
+    <!-- <style>
+        :root {
+            --sapList_HeaderBackground: var(--atlas-color-white);
+        }
+
+    </style> -->
 </head>
 
 <body>
     <section id="content">
         <atlas-avatar initials="DM"></atlas-avatar>
-        <!-- <ui5-table class="demo-table-multi" mode="MultiSelect">
-            <ui5-table-column id="column-1" slot="columns">
-                <ui5-label>City</ui5-label>
-            </ui5-table-column>
-            <ui5-table-column id="column-2" slot="columns" min-width="500" popin-text="Supplier" demand-popin>
-                <ui5-label>Supplier</ui5-label>
-            </ui5-table-column>
-            <ui5-table-column id="column-3" slot="columns" min-width="500">
-                <ui5-label>Country</ui5-label>
-            </ui5-table-column>
-            <ui5-table-group-row>Country: Bulgaria</ui5-table-group-row>
-            <ui5-table-row>
-                <ui5-table-cell><span>Sofia</span></ui5-table-cell>
-                <ui5-table-cell><span>Company 1</span></ui5-table-cell>
-                <ui5-table-cell><span>Bulgaria</span></ui5-table-cell>
-            </ui5-table-row>
-            <ui5-table-row>
-                <ui5-table-cell><span>Plovdiv</span></ui5-table-cell>
-                <ui5-table-cell><span>Company 2</span></ui5-table-cell>
-                <ui5-table-cell><span>Bulgaria</span></ui5-table-cell>
-            </ui5-table-row>
-
-            <ui5-table-group-row><span>Country: USA</span></ui5-table-group-row>
-
-            <ui5-table-row>
-                <ui5-table-cell><span>Denver</span></ui5-table-cell>
-                <ui5-table-cell><span>Company 3</span></ui5-table-cell>
-                <ui5-table-cell><span>USA</span></ui5-table-cell>
-            </ui5-table-row>
-            <ui5-table-row>
-                <ui5-table-cell><span>Boston</span></ui5-table-cell>
-                <ui5-table-cell><span>Company 4</span></ui5-table-cell>
-                <ui5-table-cell><span>USA</span></ui5-table-cell>
-            </ui5-table-row>
-        </ui5-table> -->
+        <div id="table-toolbar">
+            <div id="title">Fat possum database</div>
+            <div id="search">
+                <atlas-search primary="">
+                    <atlas-icon name="search" slot="prefix"></atlas-icon>
+                    <atlas-icon name="close" slot="suffix"></atlas-icon>
+                </atlas-search>
+                <output></output>
+            </div>
+            <div id="actions">
+                <atlas-button kind="text">Create</atlas-button>
+                <atlas-button kind="text">Edit</atlas-button>
+                <atlas-button kind="text">Delete</atlas-button>
+            </div>
+            <div id="controls">
+                <atlas-button kind="icon">
+                    <atlas-icon name="settings"></atlas-icon>
+                </atlas-button>
+                <hr width="1"/>
+                <atlas-button kind="icon">
+                    <atlas-icon name="printer"></atlas-icon>
+                </atlas-button>
+                <hr width="1"/>
+                <atlas-button kind="icon">
+                    <atlas-icon name="menuKebab"></atlas-icon>
+                </atlas-button>
+            </div>
+        </div>
     </section>
     <script src="./bundle.js" type="module"></script>
     <link rel="stylesheet" href="./hacks.css">
