@@ -26,7 +26,6 @@ These is a compact summary of the official [ui5 table documentation](https://sap
 - Design doesn't include row groups in their examples.
 - I was able to style ui5 elements selecting the slots 🤦‍♂️.
 - I'm missing something to be able to override ui5/sap css variables.
-- ui5-prefix variables use sap-prefix variables.
+- ui5-prefix variables in turn use sap-prefix variables.
 - Official documentation recomends to include only text in the cells. Not realistic.
 - There seems to be no issues with slotting any element inside a `ui5-table-cell` element.
-- 

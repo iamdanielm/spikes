@@ -74,6 +74,20 @@ atlas-avatar::part(initials) {
     justify-content: space-around;
 }
 
+atlas-input-text {
+    border: 1px solid var(--atlas-color-primary-n100);
+}
+
+span[hidden],
+.input-text-container[hidden] {
+    display: none;
+}
+
+span[visible],
+.input-text-container[visible] {
+    display: block;
+}
+
 /* atlasified table */
 
 ui5-table-cell[slot="default-1"] {
