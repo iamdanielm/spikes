@@ -67,6 +67,13 @@ atlas-avatar::part(initials) {
     justify-content: space-between;
 }
 
+/* edit entries */
+
+.edit-row-controls {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* atlasified table */
 
 ui5-table-cell[slot="default-1"] {
