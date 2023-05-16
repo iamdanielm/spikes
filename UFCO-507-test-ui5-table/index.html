@@ -6,119 +6,218 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFCO-507: Test ui5 table</title>
-    <!-- <style>
-        :root {
-            --sapList_HeaderBackground: var(--atlas-color-white);
+    <link rel="stylesheet" href="./hacks.css">
+    <style>
+        :roo {
+            /* background-color: crimson; */
+            --sapList_HeaderBackground: crimson;
         }
-
-    </style> -->
+    </style>
 </head>
 
 <body>
-    <section id="content">
-        <atlas-avatar initials="DM"></atlas-avatar>
-        <div id="table-toolbar">
-            <div id="title">Fat possum database 🌳</div>
-            <div id="search">
-                <atlas-search primary="">
-                    <atlas-icon name="search" slot="prefix"></atlas-icon>
-                    <atlas-icon name="close" slot="suffix"></atlas-icon>
-                </atlas-search>
-                <output></output>
-            </div>
-            <div id="actions">
-                <atlas-button kind="text">Create</atlas-button>
-                <atlas-button kind="text">Edit</atlas-button>
-                <atlas-button kind="text">Delete</atlas-button>
-            </div>
-            <div id="controls">
-                <atlas-button kind="icon">
-                    <atlas-icon name="settings"></atlas-icon>
+    <atlas-application-frame>
+        <input slot="search" placeholder="search...">
+        <atlas-logo beta="" slot="app-logo">
+            <span slot="text">DEMO</span>
+        </atlas-logo>
+        <atlas-button-set slot="extendedControl">
+            <atlas-button kind="icon">
+                <atlas-icon name="meatballMenu"></atlas-icon>
+            </atlas-button>
+        </atlas-button-set>
+        <atlas-button-set slot="feedToggleControl">
+            <atlas-button kind="icon">
+                <atlas-icon name="feedPanel"></atlas-icon>
+            </atlas-button>
+        </atlas-button-set>
+        <atlas-profile-control slot="profile-controls">
+            <atlas-avatar slot="image" src="" visible="image"></atlas-avatar>
+            <p slot="name">Cozy Glow</p>
+        </atlas-profile-control>
+        <atlas-button-set slot="contextual-controls">
+            <atlas-button kind="icon">
+                <atlas-icon name="message"></atlas-icon>
+            </atlas-button>
+            <atlas-button kind="icon">
+                <atlas-icon name="help"></atlas-icon>
+            </atlas-button>
+            <atlas-button kind="icon">
+                <atlas-icon name="notifications"></atlas-icon>
+            </atlas-button>
+            <atlas-button kind="icon">
+                <atlas-icon name="bank"></atlas-icon>
+            </atlas-button>
+            <atlas-button kind="icon">
+                <atlas-icon name="feedPanel"></atlas-icon>
+            </atlas-button>
+        </atlas-button-set>
+        <atlas-main-nav slot="main-nav">
+            <atlas-main-nav-item>
+                <atlas-button>
+                    <atlas-icon slot="prefix" name="home"></atlas-icon>
+                    Home
                 </atlas-button>
-                <hr width="1" />
-                <atlas-button kind="icon">
-                    <atlas-icon name="printer"></atlas-icon>
+            </atlas-main-nav-item>
+            <atlas-main-nav-item>
+                <atlas-button>
+                    <atlas-icon slot="prefix" name="settings"></atlas-icon>
+                    Settings
                 </atlas-button>
-                <hr width="1" />
-                <atlas-button kind="icon">
-                    <atlas-icon name="menuKebab"></atlas-icon>
+            </atlas-main-nav-item>
+            <atlas-main-nav-item>
+                <atlas-button>
+                    <atlas-icon slot="prefix" name="location"></atlas-icon>
+                    Location
                 </atlas-button>
-            </div>
-        </div>
-        <ui5-table mode="MultiSelect">
-            <ui5-table-column slot="columns" id="column-1"><ui5-label>Company</ui5-label></ui5-table-column>
-            <ui5-table-column slot="columns" id="column-2"><ui5-label>Document</ui5-label></ui5-table-column>
-            <ui5-table-column slot="columns" id="column-3"><ui5-label>Posting Date</ui5-label></ui5-table-column>
-            <ui5-table-column slot="columns" id="column-4"><ui5-label>Amount</ui5-label></ui5-table-column>
-            <ui5-table-column slot="columns" id="column-5"><ui5-label>Currency</ui5-label></ui5-table-column>
-            <ui5-table-column slot="columns" id="column-6"><ui5-label></ui5-label></ui5-table-column>
-            <ui5-table-group-row><span>Clickable row 🐈</span></ui5-table-group-row>
-            <ui5-table-row id="clickable-row">
-                <ui5-table-cell>
-                    <span hidden>Fat Possum Records</span>
-                    <div class="input-text-container" visible>
-                        <atlas-input-text placeholder="Fat Possum Records">
-                            <atlas-button slot="suffix" kind="icon">
-                                <atlas-icon name="close"></atlas-icon>
-                            </atlas-button>
-                        </atlas-input-text>
+            </atlas-main-nav-item>
+            <atlas-main-nav-item>
+                <atlas-button>
+                    <atlas-icon slot="prefix" name="messages"></atlas-icon>
+                    Mail
+                </atlas-button>
+            </atlas-main-nav-item>
+            <atlas-main-nav-item>
+                <atlas-button>
+                    <atlas-icon slot="prefix" name="broadcast"></atlas-icon>
+                    Broadcast
+                </atlas-button>
+            </atlas-main-nav-item>
+        </atlas-main-nav>
+        <atlas-tile-board slot="content-area">
+            <p slot="prefix">Curtis Lowe</p>
+            <section id="content">
+                <atlas-avatar initials="DM"></atlas-avatar>
+                <div id="table-toolbar">
+                    <div id="title">Fat possum database 🌳</div>
+                    <div id="search">
+                        <atlas-search primary="">
+                            <atlas-icon name="search" slot="prefix"></atlas-icon>
+                            <atlas-icon name="close" slot="suffix"></atlas-icon>
+                        </atlas-search>
+                        <output></output>
                     </div>
-                </ui5-table-cell>
-                <ui5-table-cell>
-                    <span hidden>134236784</span>
-                    <div class="input-text-container" visible>
-                        <atlas-input-text placeholder="134236784">
-                            <atlas-button slot="suffix" kind="icon">
-                                <atlas-icon name="close"></atlas-icon>
-                            </atlas-button>
-                        </atlas-input-text>
+                    <div id="actions">
+                        <atlas-button kind="text">Create</atlas-button>
+                        <atlas-button kind="text">Edit</atlas-button>
+                        <atlas-button kind="text">Delete</atlas-button>
                     </div>
-                </ui5-table-cell>
-                <ui5-table-cell>
-                    <span hidden>2020-04-12</span>
-                    <div class="input-text-container" visible>
-                        <atlas-input-text placeholder="2020-04-12">
-                            <atlas-button slot="suffix" kind="icon">
-                                <atlas-icon name="close"></atlas-icon>
-                            </atlas-button>
-                        </atlas-input-text>
-                    </div>
-                </ui5-table-cell>
-                <ui5-table-cell>
-                    <span hidden>123456.78</span>
-                    <div class="input-text-container" visible>
-                        <atlas-input-text placeholder="3456.78">
-                            <atlas-button slot="suffix" kind="icon">
-                                <atlas-icon name="close"></atlas-icon>
-                            </atlas-button>
-                        </atlas-input-text>
-                    </div>
-                </ui5-table-cell>
-                <ui5-table-cell>
-                    <span hidden>PEN</span>
-                    <div class="input-text-container" visible>
-                        <atlas-input-text placeholder="SOL">
-                            <atlas-button slot="suffix" kind="icon">
-                                <atlas-icon name="close"></atlas-icon>
-                            </atlas-button>
-                        </atlas-input-text>
-                    </div>
-                </ui5-table-cell>
-                <ui5-table-cell>
-                    <div class="edit-row-controls">
-                        <atlas-button id="clickable-edit-button" kind="icon">
-                            <atlas-icon name="edit"></atlas-icon>
-                        </atlas-button>
+                    <div id="controls">
                         <atlas-button kind="icon">
-                            <atlas-icon name="close"></atlas-icon>
+                            <atlas-icon name="settings"></atlas-icon>
+                        </atlas-button>
+                        <hr width="1" />
+                        <atlas-button kind="icon">
+                            <atlas-icon name="printer"></atlas-icon>
+                        </atlas-button>
+                        <hr width="1" />
+                        <atlas-button kind="icon">
+                            <atlas-icon name="menuKebab"></atlas-icon>
                         </atlas-button>
                     </div>
-                </ui5-table-cell>
-            </ui5-table-row>
-        </ui5-table>
-    </section>
+                </div>
+                <ui5-table mode="MultiSelect">
+                    <ui5-table-column slot="columns" id="column-1"><ui5-label>Company</ui5-label></ui5-table-column>
+                    <ui5-table-column slot="columns" id="column-2"><ui5-label>Document</ui5-label></ui5-table-column>
+                    <ui5-table-column slot="columns" id="column-3"><ui5-label>Posting
+                            Date</ui5-label></ui5-table-column>
+                    <ui5-table-column slot="columns" id="column-4"><ui5-label>Amount</ui5-label></ui5-table-column>
+                    <ui5-table-column slot="columns" id="column-5"><ui5-label>Currency</ui5-label></ui5-table-column>
+                    <ui5-table-column slot="columns" id="column-6"><ui5-label></ui5-label></ui5-table-column>
+                    <!-- <ui5-table-group-row><span>Clickable row 🐈</span></ui5-table-group-row> -->
+                    <ui5-table-row id="clickable-row">
+                        <ui5-table-cell>
+                            <span hidden>Fat Possum Records</span>
+                            <div class="input-text-container" visible>
+                                <atlas-input-text placeholder="Fat Possum Records">
+                                    <atlas-button slot="suffix" kind="icon">
+                                        <atlas-icon name="close"></atlas-icon>
+                                    </atlas-button>
+                                </atlas-input-text>
+                            </div>
+                        </ui5-table-cell>
+                        <ui5-table-cell>
+                            <span hidden>134236784</span>
+                            <div class="input-text-container" visible>
+                                <atlas-input-text placeholder="134236784">
+                                    <atlas-button slot="suffix" kind="icon">
+                                        <atlas-icon name="close"></atlas-icon>
+                                    </atlas-button>
+                                </atlas-input-text>
+                            </div>
+                        </ui5-table-cell>
+                        <ui5-table-cell>
+                            <span hidden>2020-04-12</span>
+                            <div class="input-text-container" visible>
+                                <atlas-input-text placeholder="2020-04-12">
+                                    <atlas-button slot="suffix" kind="icon">
+                                        <atlas-icon name="close"></atlas-icon>
+                                    </atlas-button>
+                                </atlas-input-text>
+                            </div>
+                        </ui5-table-cell>
+                        <ui5-table-cell>
+                            <span hidden>123456.78</span>
+                            <div class="input-text-container" visible>
+                                <atlas-input-text placeholder="3456.78">
+                                    <atlas-button slot="suffix" kind="icon">
+                                        <atlas-icon name="close"></atlas-icon>
+                                    </atlas-button>
+                                </atlas-input-text>
+                            </div>
+                        </ui5-table-cell>
+                        <ui5-table-cell>
+                            <span hidden>PEN</span>
+                            <div class="input-text-container" visible>
+                                <atlas-input-text placeholder="SOL">
+                                    <atlas-button slot="suffix" kind="icon">
+                                        <atlas-icon name="close"></atlas-icon>
+                                    </atlas-button>
+                                </atlas-input-text>
+                            </div>
+                        </ui5-table-cell>
+                        <ui5-table-cell>
+                            <div class="edit-row-controls">
+                                <atlas-button id="clickable-edit-button" kind="icon">
+                                    <atlas-icon name="edit"></atlas-icon>
+                                </atlas-button>
+                                <atlas-button kind="icon">
+                                    <atlas-icon name="close"></atlas-icon>
+                                </atlas-button>
+                            </div>
+                        </ui5-table-cell>
+                    </ui5-table-row>
+                </ui5-table>
+            </section>
+        </atlas-tile-board>
+        <atlas-feed slot="feed">
+            <atlas-button-set slot="prefix">
+                <atlas-button kind="icon">
+                    <atlas-icon name="newsfeed"></atlas-icon>
+                </atlas-button>
+                <atlas-button kind="icon">
+                    <atlas-icon name="twitter"></atlas-icon>
+                </atlas-button>
+                <atlas-button kind="icon">
+                    <atlas-icon name="feedPanel"></atlas-icon>
+                </atlas-button>
+            </atlas-button-set>
+        </atlas-feed>
+        <atlas-snackbar-box slot="snackbar-container"></atlas-snackbar-box>
+        <div slot="backdrop">
+            <atlas-alert type="danger" open="">
+                <atlas-icon name="warning" slot="icon"></atlas-icon>
+                <span slot="header">Unsaved Changes</span>
+                <span>You haven't saved your changes yet, are you sure you want to cancel changes to " <b>My
+                        Topics</b>"? </span>
+                <atlas-button-set slot="footer">
+                    <atlas-button box-type="tertiary">No</atlas-button>
+                    <atlas-button box-type="primary">Yes, cancel</atlas-button>
+                </atlas-button-set>
+            </atlas-alert>
+        </div>
+    </atlas-application-frame>
     <script src="./bundle.js" type="module"></script>
-    <link rel="stylesheet" href="./hacks.css">
 </body>
 
 </html>

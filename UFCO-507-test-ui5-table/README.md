@@ -29,3 +29,5 @@ These is a compact summary of the official [ui5 table documentation](https://sap
 - ui5-prefix variables in turn use sap-prefix variables.
 - Official documentation recomends to include only text in the cells. Not realistic.
 - There seems to be no issues with slotting any element inside a `ui5-table-cell` element.
+
+

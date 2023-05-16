@@ -7,7 +7,7 @@ const populateTable = (data, parent) => {
 
     groupIds.forEach((groupId) => {
 
-        createRowGroup(`Group ${groupId}`, parent)
+        // createRowGroup(`Group ${groupId}`, parent)
 
         data.forEach(entry => {
             if (entry.group === groupId) {
